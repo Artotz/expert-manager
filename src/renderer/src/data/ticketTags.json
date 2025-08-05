@@ -1,0 +1,470 @@
+{
+  "_links": [
+    {
+      "rel": "self",
+      "href": "/api/v1/companies/0aaa41ce-ff00-4ee8-b636-973b15c4767e/tags?Paging.Page=1&Paging.Size=100",
+      "method": "GET"
+    }
+  ],
+  "_metadata": {
+    "paging": {
+      "page": 1,
+      "size": 100
+    },
+    "where": []
+  },
+  "items": [
+    {
+      "_links": [],
+      "data": {
+        "id": "974eb3a3-202c-4bd9-aa43-d68abbecb4bd",
+        "name": "Agendamento de serviço",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "870a80bb-4d9a-43e0-8396-fbbb88c0e89e",
+        "name": "CF - Cliente",
+        "subTags": [
+          {
+            "id": "1cec3e17-9340-46d7-8a00-c379f2c9da31",
+            "name": "CBD/SAM",
+            "subTags": []
+          },
+          {
+            "id": "affef5a0-2a3c-411d-abc7-7bff997fed0e",
+            "name": "Signature/KAM",
+            "subTags": []
+          },
+          {
+            "id": "2b555028-2f49-411f-ad5b-be7b4fef2141",
+            "name": "Com Protect",
+            "subTags": []
+          },
+          {
+            "id": "11c0b761-f1b4-4109-b5d6-bf42832d2c39",
+            "name": "Sem Protect",
+            "subTags": []
+          }
+        ]
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "4716c4d7-74f5-4136-b514-43a1f2fd7de1",
+        "name": "CF – CSC",
+        "subTags": [
+          {
+            "id": "e08751d3-81d6-4c0c-911b-68c845f250b2",
+            "name": "RTS",
+            "subTags": []
+          },
+          {
+            "id": "d50bcfd8-05a5-4155-a051-0fc8be45268d",
+            "name": "RTA",
+            "subTags": []
+          },
+          {
+            "id": "4f1b5bcb-5322-4ddb-8229-d1c618eb0bd2",
+            "name": "EA",
+            "subTags": []
+          },
+          {
+            "id": "2a99dab8-7692-4d49-9ca7-74a4d0e877b1",
+            "name": "LEAD",
+            "subTags": []
+          },
+          {
+            "id": "b40fa0cf-5eea-4762-bb21-4502d3f00e27",
+            "name": "LEAD - Transferência de AOR",
+            "subTags": []
+          },
+          {
+            "id": "867d0d1f-277f-47ed-b0b6-17c5bdc47645",
+            "name": "LEAD - Reconexão",
+            "subTags": []
+          },
+          {
+            "id": "a0ca4bb5-a2f9-403a-adc4-691f375bc6d4",
+            "name": "LEAD - Disponibilidade",
+            "subTags": []
+          },
+          {
+            "id": "db235112-1eab-4323-9559-cb256ccc3b45",
+            "name": "LEAD - Rodante",
+            "subTags": []
+          },
+          {
+            "id": "d6878fe0-a783-4279-a986-28e0b5ec0e71",
+            "name": "LEAD - Lâmina",
+            "subTags": []
+          },
+          {
+            "id": "d3b0d1c0-0071-498f-b825-cae442ea4b1f",
+            "name": "LEAD - Dentes",
+            "subTags": []
+          },
+          {
+            "id": "a2f7bf94-33b1-4a9c-b563-9404ee8766be",
+            "name": "LEAD - Reforma de Componentes",
+            "subTags": []
+          },
+          {
+            "id": "83fc6fc5-bd4b-46d9-ad38-a414e90bf512",
+            "name": "LEAD - Garantia Estendida",
+            "subTags": []
+          },
+          {
+            "id": "ebb7fc84-d810-4fda-904e-bb508cf542fe",
+            "name": "LEAD - Garantia Básica",
+            "subTags": []
+          },
+          {
+            "id": "7d7d06a8-77bf-42a0-96f9-4972644f0f7a",
+            "name": "LEAD - Manutenção Corretiva",
+            "subTags": []
+          },
+          {
+            "id": "6501bd24-cdd3-49e4-9c92-254cf1b54ce7",
+            "name": "LEAD - Manutenção Preventiva",
+            "subTags": []
+          },
+          {
+            "id": "8e79cf44-85c2-4972-a807-b20fabe46e1d",
+            "name": "AD",
+            "subTags": []
+          },
+          {
+            "id": "8724d2b6-959e-488c-9f7a-0c43956278aa",
+            "name": "Conta",
+            "subTags": []
+          },
+          {
+            "id": "3a9cd3c0-ddbe-424d-b880-38c45afdfbdd",
+            "name": "Conexão",
+            "subTags": []
+          },
+          {
+            "id": "363ccbaa-03a8-4148-b7c6-d934c9cd1453",
+            "name": "Alerta",
+            "subTags": []
+          },
+          {
+            "id": "0f03e45d-b81f-4fbd-9ddc-79d5f861cc4e",
+            "name": "Relatório",
+            "subTags": []
+          },
+          {
+            "id": "943b897c-8c02-4256-abc9-e31a1e832ddd",
+            "name": "Treinamento",
+            "subTags": []
+          },
+          {
+            "id": "bc4bea7d-2adf-4dca-90e3-3dd6d3a904c0",
+            "name": "Disponibilidade",
+            "subTags": []
+          },
+          {
+            "id": "35726b11-6c86-4512-a2d3-4b8f88beb044",
+            "name": "Outros",
+            "subTags": []
+          }
+        ]
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "1a37edf3-350e-4aab-a645-58b6442b4290",
+        "name": "CF – Peças / Serviço",
+        "subTags": [
+          {
+            "id": "cdcf888f-01e4-470b-a490-454bf31417a3",
+            "name": "John Deere Protect",
+            "subTags": []
+          },
+          {
+            "id": "b90d3eac-d23f-4a98-a77e-fc46e013a04b",
+            "name": "Power Gard",
+            "subTags": []
+          },
+          {
+            "id": "37c95fc7-0647-4044-bc34-e1f5e5ebaf3f",
+            "name": "Manutenção Preventiva",
+            "subTags": []
+          },
+          {
+            "id": "e1e67966-c958-43c2-927a-9c16c4a669df",
+            "name": "Manutenção Corretiva",
+            "subTags": []
+          },
+          {
+            "id": "261ef2da-43f1-4c4a-964f-034218dbe984",
+            "name": "Entrega Técnica",
+            "subTags": []
+          },
+          {
+            "id": "192468e4-962b-4dda-92a0-550370020542",
+            "name": "Reforma de Componente",
+            "subTags": []
+          },
+          {
+            "id": "19db6ce4-9697-4d25-8458-881ac003b381",
+            "name": "GET/Rodante/Pneu",
+            "subTags": []
+          },
+          {
+            "id": "7e02f4b1-3c3a-4b6b-9a2e-76ba9d84938d",
+            "name": "Pacote de Serviço",
+            "subTags": []
+          },
+          {
+            "id": "9ad6c12a-c89d-4a67-aecd-0f56ad4028f4",
+            "name": "Outros",
+            "subTags": []
+          }
+        ]
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "edd08eef-19ec-4847-8868-bee8378374a8",
+        "name": "CF - Status",
+        "subTags": [
+          {
+            "id": "6d16188a-8d3e-49a4-a884-0a77f2f65a34",
+            "name": "Resolvido remotamente",
+            "subTags": []
+          },
+          {
+            "id": "94559564-551f-422a-accf-4faa833f91a6",
+            "name": "Enviado para Peças",
+            "subTags": []
+          },
+          {
+            "id": "0959eb58-442d-4592-900f-fff95719f8c6",
+            "name": "Enviado para Serviços",
+            "subTags": []
+          },
+          {
+            "id": "a83afdac-2aa7-495f-9a5a-40b605cca51b",
+            "name": "Em negociação",
+            "subTags": []
+          },
+          {
+            "id": "cbe54bfc-0892-4cfc-a274-f87c7ad2e176",
+            "name": "Aguardando Peças",
+            "subTags": []
+          },
+          {
+            "id": "823f82fd-bd9e-4926-b939-af92dde61b3c",
+            "name": "Aprovado",
+            "subTags": []
+          },
+          {
+            "id": "07901626-1673-42a2-900d-86598498b873",
+            "name": "Recusado - Sem contato do cliente",
+            "subTags": []
+          },
+          {
+            "id": "cf5c0788-c1cf-4c60-92ce-0966cc637199",
+            "name": "Recusado - Tentativa de Contato Esgotada",
+            "subTags": []
+          },
+          {
+            "id": "9ce11103-6743-4494-b0c7-df1e0a371641",
+            "name": "Recusado - Sem interesse no produto/serviço",
+            "subTags": []
+          },
+          {
+            "id": "8326ec4c-0787-4aec-87cb-89b6c8fc578d",
+            "name": "Recusado - Indisponibilidade de produto/serviço",
+            "subTags": []
+          },
+          {
+            "id": "49256646-ce04-4718-812c-a064b3ef581e",
+            "name": "Recusado - Tempo de entrega elevado",
+            "subTags": []
+          },
+          {
+            "id": "80bf1d60-7651-4a03-94a7-5ec98c4fb585",
+            "name": "Recusado - Condição de pagamento limitada",
+            "subTags": []
+          },
+          {
+            "id": "33a2ed25-d22a-4839-8ce4-26540c828139",
+            "name": "Recusado - Preço superior ao Concorrente",
+            "subTags": []
+          }
+        ]
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "89f37948-1f2c-4a5f-b58b-c18bc8fc8694",
+        "name": "CF - Tipo de Suporte",
+        "subTags": [
+          {
+            "id": "f858e157-b28c-49ad-a2f7-ab553eca97d4",
+            "name": "Proativo",
+            "subTags": []
+          },
+          {
+            "id": "48a8fcd2-1a40-4161-a4fe-956917dda250",
+            "name": "Reativo",
+            "subTags": []
+          }
+        ]
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "2c5abd4a-689e-4a73-876f-6ffe33ed9430",
+        "name": "Colheitadeiras",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "61f3a7ca-1086-4c36-9ac3-24dc428f3bf7",
+        "name": "Consórcio",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "5ffea5c3-8c11-41ef-b254-a9135416dcec",
+        "name": "Consultoria técnica",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "91476e37-a323-4124-bfbd-4eb53d7290a0",
+        "name": "Elogios",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "e6613d78-a52c-4184-aee2-9a37c760c19f",
+        "name": "Informações sobre produtos",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "2906556a-5f2c-4eb5-aa86-c5182333c796",
+        "name": "Instalação de equipamentos",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "9bb5ea8b-e6ce-417b-b3c4-9241e434f05a",
+        "name": "Manutenção corretiva",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "27f0792c-880b-4d0c-a5da-ed9a581f12e6",
+        "name": "Manutenção preventiva",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "fb789d03-7af9-4677-9bb0-05d45cfd6371",
+        "name": "Máquinas de construção",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "6b342673-91e8-4116-a3ed-50382d59e8f4",
+        "name": "Máquinas de pavimentação",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "0c8918cb-74f6-49f5-a85f-a4a0b08da116",
+        "name": "Peças de reposição",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "94d68a27-0782-4b01-b2e3-15e68fe012aa",
+        "name": "Plantadeiras",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "2eae6e24-d76c-4921-bcd2-f7cbfc3ab5ae",
+        "name": "Reclamações",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "ac051620-7806-4207-aeeb-05d0a4f850df",
+        "name": "Solicitação de orçamento",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "f8d1ab51-e9eb-4f7b-a962-b9ef7363bc46",
+        "name": "Soluções de tecnologia",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "df706ab7-1522-453f-aabb-71e129209264",
+        "name": "Suporte técnico",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "288859f4-a4a6-43e2-860d-afb414db702f",
+        "name": "Tratores agrícolas",
+        "subTags": []
+      }
+    },
+    {
+      "_links": [],
+      "data": {
+        "id": "e30e7db3-911e-4071-a13a-43c18cb71e0a",
+        "name": "Treinamento de operadores",
+        "subTags": []
+      }
+    }
+  ]
+}
