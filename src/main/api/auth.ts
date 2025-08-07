@@ -10,7 +10,7 @@ export async function getAccessToken(): Promise<string> {
   params.append('client_secret', import.meta.env.VITE_CLIENT_SECRET!)
   params.append('scope', 'ec.partnerapi.client.read ec.partnerapi.client.write')
 
-  console.log(import.meta.env.VITE_AUTH_URL!)
+  // console.log(import.meta.env.VITE_AUTH_URL!)
 
   const response = await fetch(import.meta.env.VITE_AUTH_URL!, {
     method: 'POST',

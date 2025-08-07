@@ -1,8 +1,15 @@
-import { contextBridge } from 'electron'
+import { contextBridge, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
+import { Ticket } from '../types/Ticket'
 
 // Custom APIs for renderer
-const api = {}
+const api = {
+  criarTicketsEAdicionarTags: async (rows: Ticket[]) => {
+    // console.log('preload')
+
+    return await ipcRenderer.invoke('client:criarTicketsEAdicionarTags', rows)
+  }
+}
 
 // Use `contextBridge` APIs to expose Electron APIs to
 // renderer only if context isolation is enabled, otherwise

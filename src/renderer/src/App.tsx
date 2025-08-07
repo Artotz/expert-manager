@@ -2,37 +2,25 @@ import { useEffect, useState } from 'react'
 import { DataGrid, type Column } from 'react-data-grid'
 import textEditor from './components/TextEditor'
 import 'react-data-grid/lib/styles.css'
-import { criarTicketsEAdicionarTags } from './service/ticketService'
+import { Ticket } from 'src/types/Ticket'
+// import './assets/main.css'
+
 // import { currentPermissions } from "@/server/api/user";
 
 const LS_KEY = 'ticket-table-data'
 
-type TicketRow = {
-  chassi: string
-  tipoContato: string
-  resumo: string
-  //   nome: string;
-  //   sobrenome: string;
-  //   email: string;
-  telefone: string
-  //   conta: string;
-  //   idExterno: string;
-}
-
-const defaultColumns: Column<TicketRow>[] = [
+const defaultColumns: Column<Ticket>[] = [
   { key: 'chassi', name: 'Chassi', renderEditCell: textEditor },
   { key: 'tipoContato', name: 'Tipo de Contato', renderEditCell: textEditor },
   { key: 'resumo', name: 'Resumo', renderEditCell: textEditor },
-  //   { key: "nome", name: "Nome", renderEditCell: textEditor },
-  //   { key: "sobrenome", name: "Sobrenome", renderEditCell: textEditor },
-  //   { key: "email", name: "Email", renderEditCell: textEditor },
-  { key: 'telefone', name: 'Telefone', renderEditCell: textEditor }
-  //   { key: "conta", name: "Conta", renderEditCell: textEditor },
-  //   { key: "idExterno", name: "ID Externo", renderEditCell: textEditor },
+  { key: 'horimetro', name: 'Horímetro', renderEditCell: textEditor },
+  { key: 'empresa', name: 'Empresa', renderEditCell: textEditor },
+  { key: 'telefone', name: 'Telefone', renderEditCell: textEditor },
+  { key: 'advisorId', name: 'Consultor', renderEditCell: textEditor }
 ]
 
 function App() {
-  const [rows, setRows] = useState<TicketRow[]>([])
+  const [rows, setRows] = useState<Ticket[]>([])
 
   useEffect(() => {
     const stored = localStorage.getItem(LS_KEY)
@@ -47,29 +35,25 @@ function App() {
     const text = e.clipboardData.getData('text/plain')
     const lines = text.trim().split('\n')
 
-    const newRows: TicketRow[] = lines.map((line) => {
+    const newRows: Ticket[] = lines.map((line) => {
       const [
         chassi,
         tipoContato,
         resumo,
-        // nome,
-        // sobrenome,
-        // email,
-        telefone
-        // conta,
-        // idExterno,
+        horimetro,
+        empresa,
+        telefone,
+        advisorId // bruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
       ] = line.split('\t').map((cell) => cell.trim())
 
       return {
         chassi,
         tipoContato,
         resumo,
-        // nome,
-        // sobrenome,
-        // email,
-        telefone
-        // conta,
-        // idExterno,
+        horimetro,
+        empresa,
+        telefone,
+        advisorId
       }
     })
 
@@ -82,9 +66,9 @@ function App() {
   }
 
   async function handleEnviarTickets() {
-    const result = await criarTicketsEAdicionarTags(rows)
+    const result = await window.api.criarTicketsEAdicionarTags(rows)
 
-    console.log(result)
+    console.log('resultado: ', result)
 
     // console.log(rows);
   }
@@ -111,8 +95,8 @@ function App() {
 
   return (
     <>
-      <div className="p-4 space-y-4">
-        <h1 className="text-xl font-bold">Importar e Criar Tickets</h1>
+      <div className="grid-container">
+        <h1>Importar e Criar Tickets</h1>
 
         <div onPaste={handlePaste}>
           <DataGrid
@@ -124,7 +108,7 @@ function App() {
           />
         </div>
 
-        <div className="flex gap-4">
+        <div>
           <button onClick={handleClear}>Limpar</button>
           <button onClick={handleEnviarTickets}>Enviar Tickets</button>
           {/* <button onClick={handleVerPermissoes}>
