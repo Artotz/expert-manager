@@ -8,6 +8,12 @@ const api = {
     // console.log('preload')
 
     return await ipcRenderer.invoke('client:criarTicketsEAdicionarTags', rows)
+  },
+
+  onTicketProgress: (callback: (result: any) => void) => {
+    ipcRenderer.on('tickets:progress', (_event, result) => {
+      callback(result)
+    })
   }
 }
 

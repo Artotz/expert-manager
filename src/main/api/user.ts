@@ -4,7 +4,9 @@ export async function currentPermissions() {
   try {
     const token = await getAccessToken()
 
+    //@ts-ignore bruhhh
     // const companyId = import.meta.env.VITE_COMPANY_ID!;
+    //@ts-ignore criar type pra env zzz
     const subscriptionKey = import.meta.env.VITE_API_PRIMARY_KEY!
 
     const response = await fetch(

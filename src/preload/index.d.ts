@@ -6,6 +6,14 @@ declare global {
     electron: ElectronAPI
     api: {
       criarTicketsEAdicionarTags: (rows: Ticket[]) => Promise<any>
+      onTicketProgress: (
+        callback: (result: {
+          // ticketId?: string
+          success: boolean
+          // error?: string
+          warning?: string
+        }) => void
+      ) => void
     }
   }
 }

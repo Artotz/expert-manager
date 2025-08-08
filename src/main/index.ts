@@ -5,9 +5,11 @@ import icon from '../../resources/icon.png?asset'
 import { Ticket } from '../types/Ticket'
 import { criarTicketsEAdicionarTags } from './service/ticketService'
 
+let mainWindow: BrowserWindow
+
 function createWindow(): void {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 900,
     height: 670,
     show: false,
@@ -79,3 +81,7 @@ ipcMain.handle('client:criarTicketsEAdicionarTags', async (_, bruh: Ticket[]) =>
   const results = await criarTicketsEAdicionarTags(bruh)
   return results
 })
+
+export function enviarResultadoParaRenderer(result: any) {
+  mainWindow.webContents.send('tickets:progress', result)
+}

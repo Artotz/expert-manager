@@ -14,7 +14,15 @@ export default function textEditor<TRow, TSummaryRow>({
 }: RenderEditCellProps<TRow, TSummaryRow>) {
   return (
     <input
-      className="w-full h-full px-1 border-2 border-gray-300 focus:border-blue-500 outline-none"
+      style={{
+        width: '100%',
+        height: '100%',
+        paddingLeft: '0.25rem',
+        paddingRight: '0.25rem',
+        borderWidth: '2px',
+        borderColor: '#D1D5DB',
+        outline: 'none'
+      }}
       ref={autoFocusAndSelect}
       value={row[column.key as keyof TRow] as unknown as string}
       onChange={(e) => onRowChange({ ...row, [column.key]: e.target.value })}

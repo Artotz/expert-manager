@@ -5,7 +5,9 @@ export async function criarTicket(ticket: Ticket) {
   try {
     const token = await getAccessToken()
 
+    //@ts-ignore criar interface para o env dps
     const companyId = import.meta.env.VITE_COMPANY_ID!
+    //@ts-ignore bruh
     const subscriptionKey = import.meta.env.VITE_API_PRIMARY_KEY!
 
     const cscId = 'a3f45e21-7403-4c92-aae7-ec1c1048ef59'
@@ -18,7 +20,8 @@ export async function criarTicket(ticket: Ticket) {
     // const idConsultorJulio = '7eba9912-5b9e-40af-9479-00dddda04519'
 
     const title = `${ticket.chassi} - ${ticket.tipoContato} - ${ticket.resumo}`
-    const description = `Empresa: ${ticket.empresa}`
+    // const description = `Empresa: ${ticket.empresa}`
+    const description = `Nossa telemetria encontrou uma oportunidade de ${ticket.resumo} para o equipamento com chassi ${ticket.chassi} (${ticket.horimetro}h), da empresa ${ticket.empresa}.`
     const productNote = ticket.chassi.slice(3, 7)
 
     // {
