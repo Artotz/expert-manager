@@ -21,4 +21,5 @@ export type Lead = {
     | 'LEAD GARANTIA BÁSICA'
     | 'LEAD CORRETIVA'
     | 'LEAD PREVENTIVA'
+    | 'LEAD RTA'
 }

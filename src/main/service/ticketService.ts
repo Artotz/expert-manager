@@ -59,37 +59,42 @@ export async function criarTicketsEAdicionarTags(tickets: Ticket[]) {
     {
       id: '6501bd24-cdd3-49e4-9c92-254cf1b54ce7',
       name: 'LEAD PREVENTIVA'
+    },
+    {
+      id: 'd50bcfd8-05a5-4155-a051-0fc8be45268d',
+      name: 'LEAD RTA'
     }
   ]
 
-  const leadTipos = [
-    'LEAD TRANSFERÊNCIA',
-    'LEAD RECONEXÃO',
-    'LEAD DISPONIBILIDADE',
-    'LEAD RODANTE',
-    'LEAD LÂMINA',
-    'LEAD DENTES',
-    'LEAD REFORMA DE COMPONENTES',
-    'LEAD GARANTIA ESTENDIDA',
-    'LEAD GARANTIA BÁSICA',
-    'LEAD CORRETIVA',
-    'LEAD PREVENTIVA'
-  ]
+  // const leadTipos = [
+  //   'LEAD TRANSFERÊNCIA',
+  //   'LEAD RECONEXÃO',
+  //   'LEAD DISPONIBILIDADE',
+  //   'LEAD RODANTE',
+  //   'LEAD LÂMINA',
+  //   'LEAD DENTES',
+  //   'LEAD REFORMA DE COMPONENTES',
+  //   'LEAD GARANTIA ESTENDIDA',
+  //   'LEAD GARANTIA BÁSICA',
+  //   'LEAD CORRETIVA',
+  //   'LEAD PREVENTIVA',
+  //   'LEAD RTA'
+  // ]
 
   function getLeadIdByName(name: string): string | undefined {
     return leads.find((lead) => lead.name === name)?.id
   }
 
   for (const ticket of tickets) {
-    if (!leadTipos.includes(ticket.resumo)) {
-      results.push({
-        success: false
-      })
+    // if (!leadTipos.includes(ticket.resumo)) {
+    //   results.push({
+    //     success: false
+    //   })
 
-      enviarResultadoParaRenderer({ ticket: ticket, success: false })
+    //   enviarResultadoParaRenderer({ ticket: ticket, success: false })
 
-      continue
-    }
+    //   continue
+    // }
 
     const { success, data, error } = await criarTicket(ticket)
 

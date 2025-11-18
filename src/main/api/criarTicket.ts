@@ -20,8 +20,8 @@ export async function criarTicket(ticket: Ticket) {
     // const idConsultorJulio = '7eba9912-5b9e-40af-9479-00dddda04519'
 
     const title = `${ticket.chassi} - ${ticket.tipoContato} - ${ticket.resumo}`
-    // const description = `Empresa: ${ticket.empresa}`
-    const description = `Nossa telemetria encontrou uma oportunidade de ${ticket.resumo} para o equipamento com chassi ${ticket.chassi} (${ticket.horimetro}h), da empresa ${ticket.empresa}.`
+    // const description = `Nossa telemetria encontrou uma oportunidade de ${ticket.resumo} para o equipamento com chassi ${ticket.chassi} (${ticket.horimetro}h), da empresa ${ticket.empresa}.`
+    const description = `Máquina apresentou o código "${ticket.resumo}" através do RTA. Necessário atuação para não ocorrer a parada do equipamento.`
     const productNote = ticket.chassi.slice(3, 7)
 
     // {
@@ -85,12 +85,12 @@ export async function criarTicket(ticket: Ticket) {
       machines: [
         {
           serialNumber: ticket.chassi,
-          productNote: productNote,
-          details: [
-            {
-              machineHours: ticket.horimetro
-            }
-          ]
+          productNote: productNote
+          // details: [
+          //   {
+          //     machineHours: ticket.horimetro
+          //   }
+          // ]
         }
       ]
     }

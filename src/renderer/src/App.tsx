@@ -28,19 +28,20 @@ const defaultColumns: Column<Ticket>[] = [
   { key: 'advisorId', name: 'Consultor', renderEditCell: textEditor }
 ]
 
-const leadTipos = [
-  'LEAD TRANSFERÊNCIA',
-  'LEAD RECONEXÃO',
-  'LEAD DISPONIBILIDADE',
-  'LEAD RODANTE',
-  'LEAD LÂMINA',
-  'LEAD DENTES',
-  'LEAD REFORMA DE COMPONENTES',
-  'LEAD GARANTIA ESTENDIDA',
-  'LEAD GARANTIA BÁSICA',
-  'LEAD CORRETIVA',
-  'LEAD PREVENTIVA'
-]
+// const leadTipos = [
+//   'LEAD TRANSFERÊNCIA',
+//   'LEAD RECONEXÃO',
+//   'LEAD DISPONIBILIDADE',
+//   'LEAD RODANTE',
+//   'LEAD LÂMINA',
+//   'LEAD DENTES',
+//   'LEAD REFORMA DE COMPONENTES',
+//   'LEAD GARANTIA ESTENDIDA',
+//   'LEAD GARANTIA BÁSICA',
+//   'LEAD CORRETIVA',
+//   'LEAD PREVENTIVA',
+//   'LEAD RTA'
+// ]
 
 // 🎨 estilos “BI-like” (inline)
 const ui = {
@@ -196,14 +197,15 @@ function App() {
     setIsRequestOngoing(false)
   }
 
-  const cellStyle: React.CSSProperties = { backgroundColor: 'rgba(255, 88, 88, 0.2)' }
+  // const cellStyle: React.CSSProperties = { backgroundColor: 'rgba(255, 88, 88, 0.2)' }
 
   // @ts-ignore bruhhh
   function renderCell(key: React.Key, props: CellRendererProps<Row, unknown>) {
-    const style =
-      // eslint-disable-next-line react/prop-types
-      props.column.key === 'resumo' && !leadTipos.includes(props.row.resumo) ? cellStyle : undefined
-    return <Cell key={key} style={style} {...props} />
+    // const style =
+    //   // eslint-disable-next-line react/prop-types
+    //   props.column.key === 'resumo' && !leadTipos.includes(props.row.resumo) ? cellStyle : undefined
+    // return <Cell key={key} style={style} {...props} />
+    return <Cell key={key} {...props} />
   }
 
   // @ts-ignore bruhhh

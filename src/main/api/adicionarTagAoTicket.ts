@@ -12,6 +12,8 @@ export async function adicionarTagAoTicket(
     //@ts-ignore sim
     const subscriptionKey = import.meta.env.VITE_API_PRIMARY_KEY!
 
+    console.log(tagAdicionalId)
+
     const response = await fetch(`https://service-api.expertconnect.deere.com${url}`, {
       method: 'POST',
       headers: {
@@ -23,9 +25,10 @@ export async function adicionarTagAoTicket(
       body: JSON.stringify({
         tagIds: [
           '4716c4d7-74f5-4136-b514-43a1f2fd7de1', // CF – CSC
-          '2a99dab8-7692-4d49-9ca7-74a4d0e877b1', // LEAD
+          // '2a99dab8-7692-4d49-9ca7-74a4d0e877b1', // LEAD
           'f858e157-b28c-49ad-a2f7-ab553eca97d4', // Proativo
-          tagAdicionalId
+          'd50bcfd8-05a5-4155-a051-0fc8be45268d' //RTA
+          // tagAdicionalId
         ]
       })
     })
