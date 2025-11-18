@@ -1,6 +1,7 @@
 import { enviarResultadoParaRenderer } from '..'
 import { Ticket } from '../../types/Ticket'
 import { adicionarTagAoTicket } from '../api/adicionarTagAoTicket'
+import { adicionarNotaAoTicket } from '../api/adicionarNotaAoTicket'
 import { criarTicket } from '../api/criarTicket'
 
 // Delay entre requisições para evitar timeouts/rate limit
@@ -104,12 +105,26 @@ export async function criarTicketsEAdicionarTags(tickets: Ticket[]) {
       continue
     }
 
-    const url = (
+    const addTicketURL = (
       data?._links.find((link: { rel: string }) => link.rel === 'add-ticket-tags')?.href || ''
     ).replace('/api/v1.0', '/api/v1')
 
     try {
-      await adicionarTagAoTicket(url, getLeadIdByName(ticket.resumo)!)
+      await adicionarTagAoTicket(addTicketURL, getLeadIdByName(ticket.resumo)!)
+    } catch (e: any) {
+      results.push({
+        success: true,
+        error: e.message,
+        warning: 'Ticket criado, mas falha ao adicionar tag / nota'
+      })
+    }
+
+    const addNoteURL = (
+      data?._links.find((link: { rel: string }) => link.rel === 'create-ticket-note')?.href || ''
+    ).replace('/api/v1.0', '/api/v1')
+
+    try {
+      await adicionarNotaAoTicket(addNoteURL, 'Olá! Teste!')
 
       results.push({
         success: true
@@ -120,14 +135,14 @@ export async function criarTicketsEAdicionarTags(tickets: Ticket[]) {
       results.push({
         success: true,
         error: e.message,
-        warning: 'Ticket criado, mas falha ao adicionar tag'
+        warning: 'Ticket criado, mas falha ao adicionar tag / nota'
       })
 
       enviarResultadoParaRenderer({
         ticket: ticket,
         success: true,
         index: tickets.indexOf(ticket),
-        warning: 'Ticket criado, mas falha ao adicionar tag'
+        warning: 'Ticket criado, mas falha ao adicionar tag / nota'
       })
     }
 
